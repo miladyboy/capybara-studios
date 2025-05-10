@@ -1,8 +1,9 @@
 import type { ReactNode } from "react"
 import Image from "next/image"
 import { Card, CardFooter } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
+import { Button, buttonVariants } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
+import { cn } from "@/lib/utils"
 
 interface ProductCardProps {
   title: string
@@ -59,9 +60,27 @@ export default function ProductCard({
       </div>
       <CardFooter className="p-6 pt-0">
         {isLive ? (
-          <Button className={`${colors.button} w-full justify-between rounded-xl py-6`}>
-            {actionText || "Try it now"} <ArrowRight className="h-5 w-5" />
-          </Button>
+          actionText === "Use Harem now" ? (
+            <a
+              href="https://getharem.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={cn(
+                buttonVariants({
+                  className: `${colors.button} w-full justify-between rounded-xl py-6`,
+                  size: undefined,
+                  variant: undefined,
+                })
+              )}
+              style={{ display: 'flex' }}
+            >
+              {actionText} <ArrowRight className="h-5 w-5" />
+            </a>
+          ) : (
+            <Button className={`${colors.button} w-full justify-between rounded-xl py-6`}>
+              {actionText || "Try it now"} <ArrowRight className="h-5 w-5" />
+            </Button>
+          )
         ) : (
           <Button variant="ghost" className={`${colors.button} w-full justify-between rounded-xl py-6`} disabled>
             Coming soon <ArrowRight className="h-5 w-5" />

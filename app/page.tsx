@@ -23,6 +23,8 @@ export default function Home() {
           <Link
             href="https://getharem.com"
             className="bg-amber-400 hover:bg-amber-500 text-amber-900 rounded-md px-4 py-2 font-medium transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Get Started
           </Link>
@@ -43,8 +45,11 @@ export default function Home() {
               We create fun, useful, and forward-thinking AI companions that make your life easier and more enjoyable.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button className="bg-amber-400 hover:bg-amber-500 text-amber-900 rounded-full h-12 px-6 text-lg">
-                Meet our AI companions <ArrowRight className="ml-2 h-5 w-5" />
+              <Button
+                className="bg-amber-400 hover:bg-amber-500 text-amber-900 rounded-full h-12 px-6 text-lg"
+                asChild
+              >
+                <a href="#products">Meet our AI companions <ArrowRight className="ml-2 h-5 w-5" /></a>
               </Button>
             </div>
           </div>
@@ -180,7 +185,9 @@ export default function Home() {
               <ul className="space-y-2">
                 <li className="text-gray-600">Thrive (Coming soon)</li>
                 <li className="text-gray-600">Fitted (Coming soon)</li>
-                <li className="text-gray-600">Harem</li>
+                <li>
+                  <a href="https://getharem.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:underline">Harem</a>
+                </li>
               </ul>
             </div>
             <div>
