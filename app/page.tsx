@@ -18,17 +18,14 @@ export default function Home() {
             <span className="font-bold text-xl text-gray-800">Capybara Studios</span>
           </div>
           <div className="hidden md:flex items-center gap-6">
-            <Link href="#products" className="text-gray-600 hover:text-gray-900 transition-colors">
-              Products
-            </Link>
-            <Link href="#about" className="text-gray-600 hover:text-gray-900 transition-colors">
-              About
-            </Link>
-            <Link href="#contact" className="text-gray-600 hover:text-gray-900 transition-colors">
-              Contact
-            </Link>
+            {/* Navigation links removed as requested */}
           </div>
-          <Button className="bg-amber-400 hover:bg-amber-500 text-amber-900">Get Started</Button>
+          <Link
+            href="https://getharem.com"
+            className="bg-amber-400 hover:bg-amber-500 text-amber-900 rounded-md px-4 py-2 font-medium transition-colors"
+          >
+            Get Started
+          </Link>
         </nav>
       </header>
 
