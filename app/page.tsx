@@ -2,8 +2,8 @@ import Link from "next/link"
 import { ArrowRight, ChevronRight, Sparkles, Wand2, Zap } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import ProductCard from "@/components/product-card"
-import CapybaraHero from "@/components/capybara-hero"
 import { Badge } from "@/components/ui/badge"
+import Image from "next/image"
 
 export default function Home() {
   return (
@@ -54,7 +54,9 @@ export default function Home() {
             </div>
           </div>
           <div className="relative h-[400px] w-full">
-            <CapybaraHero />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <Image src="/capybaras.png" alt="Capybaras" fill style={{objectFit: 'contain'}}/>
+            </div>
           </div>
         </div>
       </section>
@@ -77,7 +79,7 @@ export default function Home() {
             description="Your personal AI life coach and assistant, helping you achieve your goals and maintain balance."
             icon={<Sparkles className="h-6 w-6 text-purple-500" />}
             color="purple"
-            imageUrl="/placeholder.svg?height=200&width=200"
+            imageUrl="/thrive.png"
             isLive={false}
           />
           <ProductCard
@@ -85,7 +87,7 @@ export default function Home() {
             description="A fashion expert and personal stylist that helps you look your best for any occasion."
             icon={<Wand2 className="h-6 w-6 text-blue-500" />}
             color="blue"
-            imageUrl="/placeholder.svg?height=200&width=200"
+            imageUrl="/fitted.png"
             isLive={false}
           />
           <ProductCard
@@ -93,7 +95,7 @@ export default function Home() {
             description="Your personal AI wingman, helping you navigate social situations with confidence."
             icon={<Zap className="h-6 w-6 text-pink-500" />}
             color="pink"
-            imageUrl="/placeholder.svg?height=200&width=200"
+            imageUrl="/harem.png"
             isLive={true}
             actionText="Use Harem now"
           />

@@ -54,8 +54,8 @@ export default function ProductCard({
           <h3 className="text-2xl font-bold text-gray-800">{title}</h3>
         </div>
         <p className="text-gray-600 mb-6">{description}</p>
-        <div className="relative h-48 w-full rounded-2xl overflow-hidden mb-4">
-          <Image src={imageUrl || "/placeholder.svg"} alt={`${title} illustration`} fill className="object-cover" />
+        <div className="relative w-full aspect-square rounded-2xl overflow-hidden mb-4 bg-white">
+          <Image src={imageUrl || "/placeholder.svg"} alt={`${title} illustration`} fill className="object-contain" />
         </div>
       </div>
       <CardFooter className="p-6 pt-0">
