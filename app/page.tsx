@@ -192,7 +192,7 @@ export default function Home() {
             </div>
             <div>
               <h3 className="font-bold text-gray-800 mb-4">Contact</h3>
-              <p className="text-gray-600">hello@capybarastudios.com</p>
+              <p className="text-gray-600">team@capybarastudios.com</p>
               <div className="flex space-x-4 mt-4">
                 <div className="h-10 w-10 rounded-full bg-gray-200 flex items-center justify-center">
                   <span className="text-gray-600">📧</span>
